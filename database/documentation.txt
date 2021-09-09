@@ -1,0 +1,41 @@
+Tables:
+Trainer(id int, name nvarchar(50) unique)
+Contestant(id int, name nvarchar(50), trainerID int)
+Performance(id int, contestantID int, usedSong nvarchar(50), time time, selectedTeam int)
+TrainerFeedback(performanceID int, trainerID int, content nvarchar(100), doSelect bit)
+
+
+Functions:  
+fn_getContestantsByTrainer(@name) (done)
+fn_getAllContestants() (done)
+fn_getAllTrainers() (done)
+fn_getAllPerFormances() (chua lam)
+
+Procedures: all done
+
+--Add data to database d
+sp_addContestant(@contestantName)
+
+-- contestant choose Trainer d
+sp_chooseTrainer(@trainerID, @performanceID int)
+
+--Add feedback d
+sp_addFeedback(performanceID int, trainerID int, content nvarchar(100), doSelect bit)
+
+--Add performance d
+sp_addPerformance(@contestantName, usedSong nvarchar(50), time time)
+
+--Add trainer d
+sp_addTrainer(name)
+
+Requirements:
+- get members of each trainer: fn_getContestantsByTrainer(@name)
+- get all Contestants: fn_getAllContestants()
+- get all Trainers: fn_getAllTrainers()
+- add a Contestant to a Trainer: sp_chooseTrainer(@trainerID, @performanceID int)
+//- get a Performance of a contestant (number of picks, feedback, time, contestant name, song):
+//    sp_
+- Add feedbackfrom trainer(): sp_addFeedback(performanceID int, trainerID int, content nvarchar(100), doSelect bit)
+- Add a performance(contestantID, songName): sp_addPerformance(contestantID int, usedSong nvarchar(50), time time)
+- Add a trainer: sp_addTrainer(name)
+- Get all performances (ID, ....)
