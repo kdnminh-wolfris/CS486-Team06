@@ -2,6 +2,9 @@
 
 This is an app for our final-term lab project on the subject Introduction to Database (CS486) at University of Science – Vietnam National University in Ho Chi Minh City. Our test requested us to create a database for the data before and after The Voice's Blind Audition Round and some simple handlings on the database; needed to be done in 3 hours.
 
+## Key Technologies
+`C#`, `SQL`, `.NET Framework`
+
 ## Team Members
 - [Khấu Đặng Nhật Minh](https://www.linkedin.com/in/wolfris/) (student ID: 19125011)
 - [Nguyễn Khánh Nguyên](https://www.linkedin.com/in/nguyen-khanh-nguyen/) (student ID: 19125109)
